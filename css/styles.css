@@ -111,15 +111,22 @@ body {
   margin-left: auto;
 }
 
-.site-info a {
-  padding: 32px 0;
+.site-info .link {
+  display: flex;
+  align-items: flex-start;
+  padding: 32px, 0 !important;
+  color: var(--primary-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .site-info .item + .item {
   margin-left: 30px;
 }
 .mail {
-  display: block;
   fill: currentColor;
   margin-right: 8px;
 }
@@ -129,25 +136,12 @@ body {
   margin-right: 5px;
 }
 
-.align {
-  display: flex;
-}
-
 .site-info > .item {
   display: flex;
   align-items: center;
   padding: 32px, 0;
 }
 
-.site-info a {
-  padding: 32px, 0;
-  color: var(--primary-text-color);
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
 .site-info a:hover,
 .site-info a:focus {
   color: var(--accent-text-color);
@@ -161,8 +155,8 @@ body {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
 
-  min-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -212,13 +206,14 @@ body {
 .features .icon-thumb {
   width: 270px;
   height: 120px;
-  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: var(--bg-grey-color);
   border-radius: 4px;
   margin-bottom: 30px;
-}
-.features .icon-thumb .icon {
-  margin-top: 25px;
 }
 
 .no-pudding-button {
@@ -254,6 +249,8 @@ body {
 }
 
 .team > .item {
+  width: 270px;
+
   border: 0px solid transparent;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -262,7 +259,7 @@ body {
   background-color: var(--bg-white-color);
 }
 
-.team .item:not(:first-child) {
+.team > .item:not(:first-child) {
   margin-left: 30px;
 }
 
@@ -285,20 +282,17 @@ body {
   line-height: 1.19;
 
   margin: 0;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 
   text-align: center;
 }
 
 .social-networks {
+  justify-content: space-between;
   display: flex;
   padding-bottom: 30px;
-  justify-content: center;
-}
-
-.sn-link:hover,
-.sn-link:focus {
-  fill: var(--bg-white-color);
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .social-networks .item:hover,
@@ -306,17 +300,22 @@ body {
   background-color: var(--accent-text-color);
 }
 
-.sn-link {
-  fill: var(--primary-text-color);
-  display: block;
-  width: 44px;
-  height: 44px;
-  padding: 12px;
+.social-networks .item:hover .sn-link,
+.social-networks .item:focus .sn-link {
+  fill: var(--bg-white-color);
 }
 
-.social-networks .item + .item {
-  margin-left: 10px;
+.sn-link {
+  fill: #afb1b8;
+
+  width: 20px;
+  height: 20px;
 }
+
+.social-networks .item a {
+  display: flex;
+}
+
 .social-networks .item {
   display: flex;
   justify-content: center;
@@ -329,7 +328,8 @@ body {
   height: 44px;
 }
 /* CLIENTS */
-.client {
+.client,
+.clients {
   color: var(--client-color);
   display: block;
 }
@@ -337,15 +337,23 @@ body {
 .clients .item + .item {
   margin-left: 30px;
 }
-
-.client:hover,
-.client:focus {
+.clients .item:hover,
+.clients .item:focus {
   color: var(--accent-text-color);
 }
+
+.clients .item:hover .client,
+.clients .item:focus .client {
+  color: var(--accent-text-color);
+}
+
 .clients {
   display: flex;
 }
-.clients .icon-thumb {
+.clients .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
   text-align: center;
@@ -353,8 +361,7 @@ body {
   border: 1px solid currentColor;
   border-radius: 4px;
 }
-.clients .icon-thumb .icon {
-  margin-top: 16px;
+.clients .item .icon {
   fill: currentColor;
 }
 
@@ -481,7 +488,7 @@ body {
   text-transform: uppercase;
 
   color: var(--bg-white-color);
-  margin-top: 12px;
+
   margin-bottom: 20px;
 }
 
@@ -491,6 +498,12 @@ body {
 .footer-social-networks .item {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-social-networks .item:hover,
@@ -504,9 +517,8 @@ body {
 .footer-social-networks .sn-link {
   fill: var(--bg-white-color);
   display: block;
-  width: 44px;
-  height: 44px;
-  padding: 12px;
+  width: 20px;
+  height: 20px;
 }
 
 .footer .container {
