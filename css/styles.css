@@ -114,7 +114,7 @@ body {
 .site-info .link {
   display: flex;
   align-items: flex-start;
-  padding: 32px, 0 !important;
+  padding: 32px 0;
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -314,18 +314,19 @@ body {
 
 .social-networks .item a {
   display: flex;
-}
-
-.social-networks .item {
-  display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
 
   border: 0;
   margin: 0;
   width: 44px;
   height: 44px;
+}
+
+.social-networks .item {
+  display: flex;
+
+  border-radius: 50%;
 }
 /* CLIENTS */
 .client,
@@ -350,14 +351,18 @@ body {
 .clients {
   display: flex;
 }
-.clients .item {
+
+.clients .item a {
   display: flex;
-  justify-content: center;
+
   align-items: center;
   width: 170px;
   height: 92px;
-  text-align: center;
 
+  justify-content: center;
+}
+
+.clients .item {
   border: 1px solid currentColor;
   border-radius: 4px;
 }
@@ -381,6 +386,11 @@ body {
 
 .project .item:hover,
 .project .item:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.project a:hover,
+.project a:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -411,6 +421,7 @@ body {
   margin-bottom: 4px;
 }
 .filter-name {
+  color: var(--primary-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -495,15 +506,18 @@ body {
 .footer-social-networks {
   display: flex;
 }
-.footer-social-networks .item {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+
+.footer-social-networks .item a {
   width: 44px;
   height: 44px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.footer-social-networks .item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
 
 .footer-social-networks .item:hover,
