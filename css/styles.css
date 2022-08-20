@@ -314,6 +314,7 @@ body {
 
 .social-networks .item a {
   display: flex;
+
   justify-content: center;
   align-items: center;
 
@@ -324,8 +325,6 @@ body {
 }
 
 .social-networks .item {
-  display: flex;
-
   border-radius: 50%;
 }
 /* CLIENTS */
@@ -384,13 +383,11 @@ body {
   flex-wrap: wrap;
 }
 
-.project .item:hover,
-.project .item:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.project .item .link {
+  display: block;
 }
-
-.project a:hover,
-.project a:focus {
+.project .item .link:hover,
+.project .item .link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
