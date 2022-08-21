@@ -295,13 +295,13 @@ body {
   padding-right: 32px;
 }
 
-.social-networks .item:hover,
-.social-networks .item:focus {
+.social-networks a:hover,
+.social-networks a:focus {
   background-color: var(--accent-text-color);
 }
 
-.social-networks .item:hover .sn-link,
-.social-networks .item:focus .sn-link {
+.social-networks a:hover .sn-link,
+.social-networks a:focus .sn-link {
   fill: var(--bg-white-color);
 }
 
@@ -317,6 +317,7 @@ body {
 
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 
   border: 0;
   margin: 0;
@@ -324,9 +325,6 @@ body {
   height: 44px;
 }
 
-.social-networks .item {
-  border-radius: 50%;
-}
 /* CLIENTS */
 .client,
 .clients {
@@ -337,13 +335,13 @@ body {
 .clients .item + .item {
   margin-left: 30px;
 }
-.clients .item:hover,
-.clients .item:focus {
+.clients a:hover,
+.clients a:focus {
   color: var(--accent-text-color);
 }
 
-.clients .item:hover .client,
-.clients .item:focus .client {
+.clients a:hover .client,
+.clients a:focus .client {
   color: var(--accent-text-color);
 }
 
@@ -357,14 +355,12 @@ body {
   align-items: center;
   width: 170px;
   height: 92px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
 
   justify-content: center;
 }
 
-.clients .item {
-  border: 1px solid currentColor;
-  border-radius: 4px;
-}
 .clients .item .icon {
   fill: currentColor;
 }
@@ -511,14 +507,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.footer-social-networks .item {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
 
-.footer-social-networks .item:hover,
-.footer-social-networks .item:focus {
+.footer-social-networks a:hover,
+.footer-social-networks a:focus {
   background-color: var(--accent-text-color);
 }
 
